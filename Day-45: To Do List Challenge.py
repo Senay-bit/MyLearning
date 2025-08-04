@@ -80,7 +80,7 @@ while True:
             pos = 0
         elif item == "Day":
             pos = 1
-        elif item == "importance":
+        elif item == "Importance":
             pos = 2
         else:
             print()
@@ -96,7 +96,7 @@ while True:
                     for l in i:
                         TodoList[x][pos] = change
         if error:
-            print(f"{group} has been succesfully changed into {change}")
+            print(f"The changes have been made!")
             break
         else:
             exit = input(f"Sorry, {group} is not in the To-do List. Exit? y/n\n> ").strip().lower()
@@ -130,7 +130,7 @@ while True:
     if question == 5:
         exit = input("Are you sure you want to exit? y/n\n> ").strip().lower()
         if exit == "y":
-            os.system("clear")
+            clear()
             break
         else:
             clear()
