@@ -36,3 +36,4 @@ while True:
 
 print()
 print("Bingo! You won!!")
+input()

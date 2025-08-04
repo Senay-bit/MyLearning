@@ -24,3 +24,5 @@ for i in listofShame:
     for k in i:
         print(f"{k:^10} | ", end = "")
     print()
+
+input()
