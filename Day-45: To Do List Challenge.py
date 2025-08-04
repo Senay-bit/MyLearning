@@ -2,6 +2,12 @@ import os, time
 
 TodoList = []
 
+def clear():
+    if os.name == 'nt':
+        _ = os.system('cls')
+    else:
+        _ = os.system('clear')
+
 def view():
     period = (len(TodoList) * 2) - 3
     if period < 1:
@@ -24,9 +30,9 @@ while True:
     except ValueError:
         print("Please specify what you wish to do using the numbers corresponding to your desired action.")
         time.sleep(3)
-        os.system("clear")
+        clear()
         continue
-    os.system("clear")
+    clear()
 
     if question == 1:
         print("ADD")
@@ -58,7 +64,7 @@ while True:
             if exit == "y":
                 break
             elif exit == "n":
-                os.system("clear")
+                clear()
                 continue
         else:
             break
@@ -80,7 +86,7 @@ while True:
             print()
             print('Please answer the question using "Task", "Day", or "Importance"')
             time.sleep(3)
-            os.system("clear")
+            clear()
             continue
         for i in TodoList:
             for k in i:
@@ -97,7 +103,7 @@ while True:
             if exit == "y":
                 break
             elif exit == "n":
-                os.system("clear")
+                clear()
                 continue
     while question == 4:
         print("VIEW")
@@ -119,7 +125,7 @@ while True:
         else:
             print("Please specify if you wish to view priority tasks or all tasks.")
             time.sleep(3)
-            os.system("clear")
+            clear()
             continue
     if question == 5:
         exit = input("Are you sure you want to exit? y/n\n> ").strip().lower()
@@ -127,12 +133,12 @@ while True:
             os.system("clear")
             break
         else:
-            os.system("clear")
+            clear()
             continue
     if question > 5:
         print("Please input the numbers corresponding to the task you want to perform only.")
     time.sleep(3)
-    os.system("clear")
+    clear()
 print("FINSHED TO-DO LIST")
 print()
 view()
