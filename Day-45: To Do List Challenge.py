@@ -136,4 +136,3 @@ while True:
 print("FINSHED TO-DO LIST")
 print()
 view()
-input()
